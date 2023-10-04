@@ -21,7 +21,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
      */
     public VentanaBienvenida() {
         initComponents();
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null); //Centrar
+        this.setResizable(false); //Quitar botones maximizar
+        
+        //Declaración y uso de fuentes
         tipoFuente = new Fuentes();
         lblArchivo.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
         lblTitulo.setFont(tipoFuente.fuente(tipoFuente.INTER,0,30));
@@ -34,6 +37,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         lblTitulo3.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
         lblTitulo4.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
         lblTitulo5.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        btnOpen.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        btnNew.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        btnCompile.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        btnSave.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
     }
 
     /**
@@ -57,10 +64,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         lbl_Icono = new javax.swing.JLabel();
         lblAyuda1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btnOpen = new javax.swing.JButton();
+        btnNew = new javax.swing.JButton();
+        btnCompile = new javax.swing.JButton();
+        btnSave = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         lblTitulo = new javax.swing.JLabel();
         lblTitulo2 = new javax.swing.JLabel();
@@ -107,15 +114,15 @@ public class VentanaBienvenida extends javax.swing.JFrame {
 
         lblMinimizar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblMinimizar.setForeground(new java.awt.Color(255, 255, 255));
-        lblMinimizar.setText("Minimizar");
+        lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/min.png"))); // NOI18N
 
         lblCentrar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblCentrar.setForeground(new java.awt.Color(255, 255, 255));
-        lblCentrar.setText("Centrar");
+        lblCentrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/centrar.png"))); // NOI18N
 
         lblCerrar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblCerrar.setForeground(new java.awt.Color(255, 255, 255));
-        lblCerrar.setText("Cerrar");
+        lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit.png"))); // NOI18N
 
         lbl_Icono.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbl_Icono.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,7 +149,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
                 .addComponent(lblAyuda)
                 .addGap(248, 248, 248)
                 .addComponent(lblAyuda1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 429, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 504, Short.MAX_VALUE)
                 .addComponent(lblMinimizar)
                 .addGap(26, 26, 26)
                 .addComponent(lblCentrar)
@@ -169,22 +176,22 @@ public class VentanaBienvenida extends javax.swing.JFrame {
 
         jPanel1.add(jpnSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/open-file.png"))); // NOI18N
-        jButton1.setText("Abrir");
+        btnOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/open-file.png"))); // NOI18N
+        btnOpen.setText("Abrir");
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
-        jButton2.setText("Nuevo");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnNew.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
+        btnNew.setText("Nuevo");
+        btnNew.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnNewActionPerformed(evt);
             }
         });
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/compile.png"))); // NOI18N
-        jButton3.setText("Compilar");
+        btnCompile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/compile.png"))); // NOI18N
+        btnCompile.setText("Compilar");
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
-        jButton4.setText("Guardar");
+        btnSave.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save.png"))); // NOI18N
+        btnSave.setText("Guardar");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -192,14 +199,14 @@ public class VentanaBienvenida extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnNew, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
+                .addComponent(btnOpen, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(51, 51, 51)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(714, Short.MAX_VALUE))
+                .addComponent(btnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(btnCompile, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(698, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -207,10 +214,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCompile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnOpen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnNew, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -280,10 +287,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
                 .addComponent(lblTitulo5)
                 .addGap(27, 27, 27)
                 .addComponent(lblTitulo1)
-                .addContainerGap(173, Short.MAX_VALUE))
+                .addContainerGap(183, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 1330, 560));
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 1330, 570));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -299,9 +306,9 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnNewActionPerformed
 
     private void lblAyudaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAyudaMouseEntered
         lblAyuda.setForeground(Color.red);
@@ -352,10 +359,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton btnCompile;
+    private javax.swing.JButton btnNew;
+    private javax.swing.JButton btnOpen;
+    private javax.swing.JButton btnSave;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
