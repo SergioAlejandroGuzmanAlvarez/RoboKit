@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import tipografias.Fuentes;
 import static javax.swing.JOptionPane.showMessageDialog;
@@ -40,6 +41,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         btnNew.setFont(tipoFuente.fuente(tipoFuente.INTER,0,14));
         btnCompile.setFont(tipoFuente.fuente(tipoFuente.INTER,0,14));
         btnSave.setFont(tipoFuente.fuente(tipoFuente.INTER,0,14));
+        
+        
+       //Icono programa
+       setIconImage(new ImageIcon(getClass().getResource("/images/logo-png.png")).getImage());
     }
 
     /**
@@ -134,7 +139,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
 
         lbl_Icono.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbl_Icono.setForeground(new java.awt.Color(255, 255, 255));
-        lbl_Icono.setText("Icono");
+        lbl_Icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logopng2.png"))); // NOI18N
 
         lblAyuda1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblAyuda1.setForeground(new java.awt.Color(255, 255, 255));
@@ -157,7 +162,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
                 .addComponent(lblAyuda)
                 .addGap(248, 248, 248)
                 .addComponent(lblAyuda1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 504, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 480, Short.MAX_VALUE)
                 .addComponent(lblMinimizar)
                 .addGap(26, 26, 26)
                 .addComponent(lblCentrar)
@@ -179,7 +184,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
                     .addComponent(lblCerrar)
                     .addComponent(lbl_Icono)
                     .addComponent(lblAyuda1))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel1.add(jpnSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, -1));
