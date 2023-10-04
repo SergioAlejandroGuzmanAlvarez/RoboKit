@@ -1,3 +1,6 @@
+
+import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -72,6 +75,14 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         lblAyuda.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblAyuda.setForeground(new java.awt.Color(255, 255, 255));
         lblAyuda.setText("Ayuda");
+        lblAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                lblAyudaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                lblAyudaMouseExited(evt);
+            }
+        });
 
         lblMinimizar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblMinimizar.setForeground(new java.awt.Color(255, 255, 255));
@@ -187,36 +198,36 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(207, 206, 212));
 
         lblTitulo.setBackground(new java.awt.Color(0, 0, 0));
-        lblTitulo.setFont(new java.awt.Font("Arial", 0, 36)); // NOI18N
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         lblTitulo.setText("Bienvenido a RoboKit IDE");
 
         lblTitulo2.setBackground(new java.awt.Color(0, 0, 0));
-        lblTitulo2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTitulo2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTitulo2.setText("A programar!");
 
         lblTitulo3.setBackground(new java.awt.Color(0, 0, 0));
-        lblTitulo3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTitulo3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTitulo3.setForeground(new java.awt.Color(133, 46, 186));
         lblTitulo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
         lblTitulo3.setText("Crear un nuevo archivo");
 
         lblTitulo4.setBackground(new java.awt.Color(0, 0, 0));
-        lblTitulo4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTitulo4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTitulo4.setForeground(new java.awt.Color(133, 46, 186));
         lblTitulo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/open-file.png"))); // NOI18N
         lblTitulo4.setText("Abrir un archivo");
 
         lblTitulo5.setBackground(new java.awt.Color(0, 0, 0));
-        lblTitulo5.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTitulo5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTitulo5.setForeground(new java.awt.Color(133, 46, 186));
         lblTitulo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/folder.png"))); // NOI18N
         lblTitulo5.setText("Abrir una carpeta");
 
         lblTitulo1.setBackground(new java.awt.Color(0, 0, 0));
-        lblTitulo1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        lblTitulo1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblTitulo1.setForeground(new java.awt.Color(133, 46, 186));
         lblTitulo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/about.png"))); // NOI18N
-        lblTitulo1.setText("Abrir una carpeta");
+        lblTitulo1.setText("Acerca de RoboKit");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -231,7 +242,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
                     .addComponent(lblTitulo)
                     .addComponent(lblTitulo4)
                     .addComponent(lblTitulo5))
-                .addContainerGap(870, Short.MAX_VALUE))
+                .addContainerGap(875, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,7 +259,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
                 .addComponent(lblTitulo5)
                 .addGap(27, 27, 27)
                 .addComponent(lblTitulo1)
-                .addContainerGap(182, Short.MAX_VALUE))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 1330, 560));
@@ -270,6 +281,14 @@ public class VentanaBienvenida extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void lblAyudaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAyudaMouseEntered
+        lblAyuda.setForeground(Color.red);
+    }//GEN-LAST:event_lblAyudaMouseEntered
+
+    private void lblAyudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAyudaMouseExited
+        lblAyuda.setForeground(Color.white);
+    }//GEN-LAST:event_lblAyudaMouseExited
 
     /**
      * @param args the command line arguments
