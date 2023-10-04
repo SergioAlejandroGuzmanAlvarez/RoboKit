@@ -36,10 +36,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         lblTitulo3.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
         lblTitulo4.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
         lblTitulo5.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
-        btnOpen.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
-        btnNew.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
-        btnCompile.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
-        btnSave.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        btnOpen.setFont(tipoFuente.fuente(tipoFuente.INTER,0,14));
+        btnNew.setFont(tipoFuente.fuente(tipoFuente.INTER,0,14));
+        btnCompile.setFont(tipoFuente.fuente(tipoFuente.INTER,0,14));
+        btnSave.setFont(tipoFuente.fuente(tipoFuente.INTER,0,14));
     }
 
     /**
@@ -99,6 +99,9 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         lblAyuda.setForeground(new java.awt.Color(255, 255, 255));
         lblAyuda.setText("Ayuda");
         lblAyuda.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblAyudaMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblAyudaMouseEntered(evt);
             }
@@ -180,6 +183,8 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         );
 
         jPanel1.add(jpnSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1350, -1));
+
+        jPanel2.setBackground(new java.awt.Color(233, 231, 231));
 
         btnOpen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/open-file.png"))); // NOI18N
         btnOpen.setText("Abrir");
@@ -324,12 +329,16 @@ public class VentanaBienvenida extends javax.swing.JFrame {
     }//GEN-LAST:event_lblAyudaMouseExited
 
     private void lblAyudaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblAyudaKeyPressed
-        JOptionPane.showMessageDialog(null,"Realizado por: \n Ibañez Parra Armando Jair\n Guzmán Álvarez Srgio Alejandro\n Manjarez Manzano Kevin Aziel ");
+        
     }//GEN-LAST:event_lblAyudaKeyPressed
 
     private void lblCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCerrarMouseClicked
         System.exit(0);
     }//GEN-LAST:event_lblCerrarMouseClicked
+
+    private void lblAyudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAyudaMouseClicked
+       JOptionPane.showMessageDialog(null,"Realizado por: \n Ibañez Parra Armando Jair\n Guzmán Álvarez Srgio Alejandro\n Manjarez Manzano Kevin Aziel ");
+    }//GEN-LAST:event_lblAyudaMouseClicked
 
     /**
      * @param args the command line arguments
