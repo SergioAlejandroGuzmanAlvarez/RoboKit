@@ -22,7 +22,6 @@ public class VentanaBienvenida extends javax.swing.JFrame {
     public VentanaBienvenida() {
         initComponents();
         setLocationRelativeTo(null); //Centrar
-        this.setResizable(false); //Quitar botones maximizar
         
         //Declaración y uso de fuentes
         tipoFuente = new Fuentes();
@@ -77,6 +76,7 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         lblTitulo1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -123,6 +123,11 @@ public class VentanaBienvenida extends javax.swing.JFrame {
         lblCerrar.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lblCerrar.setForeground(new java.awt.Color(255, 255, 255));
         lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit.png"))); // NOI18N
+        lblCerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblCerrarMouseClicked(evt);
+            }
+        });
 
         lbl_Icono.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         lbl_Icono.setForeground(new java.awt.Color(255, 255, 255));
@@ -321,6 +326,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
     private void lblAyudaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblAyudaKeyPressed
         JOptionPane.showMessageDialog(null,"Realizado por: \n Ibañez Parra Armando Jair\n Guzmán Álvarez Srgio Alejandro\n Manjarez Manzano Kevin Aziel ");
     }//GEN-LAST:event_lblAyudaKeyPressed
+
+    private void lblCerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCerrarMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_lblCerrarMouseClicked
 
     /**
      * @param args the command line arguments
