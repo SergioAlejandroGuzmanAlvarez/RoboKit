@@ -1,5 +1,8 @@
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
+import tipografias.Fuentes;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -10,14 +13,27 @@ import java.awt.Color;
  *
  * @author Alex
  */
-public class VentanaBienvenida extends javax.swing.JFrame {
 
+public class VentanaBienvenida extends javax.swing.JFrame {
+    Fuentes tipoFuente;
     /**
      * Creates new form NewJFrame
      */
     public VentanaBienvenida() {
         initComponents();
         setLocationRelativeTo(null);
+        tipoFuente = new Fuentes();
+        lblArchivo.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        lblTitulo.setFont(tipoFuente.fuente(tipoFuente.INTER,0,30));
+        lblEditar.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        lblSeleccion.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        lblAyuda.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        lblAyuda1.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        lblTitulo1.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        lblTitulo2.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        lblTitulo3.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        lblTitulo4.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
+        lblTitulo5.setFont(tipoFuente.fuente(tipoFuente.INTER,0,15));
     }
 
     /**
@@ -81,6 +97,11 @@ public class VentanaBienvenida extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 lblAyudaMouseExited(evt);
+            }
+        });
+        lblAyuda.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                lblAyudaKeyPressed(evt);
             }
         });
 
@@ -289,6 +310,10 @@ public class VentanaBienvenida extends javax.swing.JFrame {
     private void lblAyudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblAyudaMouseExited
         lblAyuda.setForeground(Color.white);
     }//GEN-LAST:event_lblAyudaMouseExited
+
+    private void lblAyudaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_lblAyudaKeyPressed
+        JOptionPane.showMessageDialog(null,"Realizado por: \n Ibañez Parra Armando Jair\n Guzmán Álvarez Srgio Alejandro\n Manjarez Manzano Kevin Aziel ");
+    }//GEN-LAST:event_lblAyudaKeyPressed
 
     /**
      * @param args the command line arguments
