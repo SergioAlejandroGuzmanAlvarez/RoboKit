@@ -3,7 +3,7 @@ import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import tipografias.Fuentes;
-import static javax.swing.JOptionPane.showMessageDialog;
+
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
