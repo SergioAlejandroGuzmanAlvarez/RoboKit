@@ -52,10 +52,10 @@ public class InterfazPrincipal extends javax.swing.JFrame {
         Léxico5 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        taOutput = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        taInput = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTree4 = new javax.swing.JTree();
 
@@ -296,9 +296,9 @@ public class InterfazPrincipal extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 204));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        taOutput.setColumns(20);
+        taOutput.setRows(5);
+        jScrollPane1.setViewportView(taOutput);
 
         jLabel3.setText("Output");
 
@@ -324,9 +324,9 @@ public class InterfazPrincipal extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        taInput.setColumns(20);
+        taInput.setRows(5);
+        jScrollPane2.setViewportView(taInput);
 
         jScrollPane4.setViewportView(jTree4);
 
@@ -476,8 +476,6 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTree jTree4;
     private javax.swing.JPanel jpnSuperior;
     private javax.swing.JLabel lblArchivo;
@@ -489,5 +487,7 @@ public class InterfazPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel lblMinimizar;
     private javax.swing.JLabel lblSeleccion;
     private javax.swing.JLabel lbl_Icono;
+    private javax.swing.JTextArea taInput;
+    private javax.swing.JTextArea taOutput;
     // End of variables declaration//GEN-END:variables
 }
