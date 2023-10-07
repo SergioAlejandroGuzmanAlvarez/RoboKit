@@ -1,0 +1,30 @@
+package test;
+
+import java_cup.runtime.*;
+
+class Parser;
+
+/** symbolos terminales **/
+terminal MAS, MENOS, MUL, DIV, LPAREN, RPAREN;
+terminal Integer INT;
+
+
+/** symbolos no terminales **/
+non terminal Integer exp;
+
+/** Precedence **/
+precedence left MAS, MENOS;
+precedence left MUL, DIV;
+
+/** inicio **/
+start with exp;
+
+/** Gramaticas **/              /** reglas semanticas **/
+
+/** expresion basica **/
+exp ::= exp:e1 MAS exp:e2       {: RESULT = e1+e2; :}
+    |   exp:e1 MENOS exp:e2     {: RESULT = e1-e2; :}
+    |   exp:e1 MUL exp:e2       {: RESULT = e1*e2; :}
+    |   exp:e1 DIV exp:e2       {: RESULT = e1/e2; :}
+    |   LPAREN exp:e RPAREN     {: RESULT = e; :}
+    |   INT:n                   {: RESULT = n; :};
