@@ -1,5 +1,7 @@
 package test;
 
+import java.io.BufferedReader;
+import java.io.StringReader;
 import org.fife.ui.rsyntaxtextarea.RSyntaxTextArea;
 import org.fife.ui.rtextarea.RTextScrollPane;
 
@@ -112,7 +114,15 @@ public class TestAnalisis extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCompileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCompileActionPerformed
-        output.setText(txt.getText());
+        String input = txt.getText();
+        idLexer l = new idLexer(new BufferedReader(new StringReader(input)));
+        Parser p = new Parser(l);
+        
+        try {
+            Integer n = (Integer)p.parse().value;
+            output.setText("hola el resultado es :" + n);
+        } catch (Exception e) {
+        }
     }//GEN-LAST:event_btnCompileActionPerformed
 
     /**

@@ -793,42 +793,42 @@ public class idLexer implements java_cup.runtime.Scanner {
           // fall through
           case 43: break;
           case 3:
-            { System.out.println("Se encontro el lexema" + yytext()); 
+            { System.out.println("Se encontro el lexema " + yytext()); 
             }
           // fall through
           case 44: break;
           case 4:
-            { System.out.println("Se encontro el lexema" + yytext()); return symbol(ParserSym.LPAREN);
+            { System.out.println("Se encontro el lexema " + yytext()); return symbol(ParserSym.LPAREN);
             }
           // fall through
           case 45: break;
           case 5:
-            { System.out.println("Se encontro el lexema" + yytext()); return symbol(ParserSym.RPAREN);
+            { System.out.println("Se encontro el lexema " + yytext()); return symbol(ParserSym.RPAREN);
             }
           // fall through
           case 46: break;
           case 6:
-            { System.out.println("Se encontro el lexema" + yytext()); return symbol(ParserSym.MUL);
+            { System.out.println("Se encontro el lexema " + yytext()); return symbol(ParserSym.MUL);
             }
           // fall through
           case 47: break;
           case 7:
-            { System.out.println("Se encontro el lexema" + yytext()); return symbol(ParserSym.MAS);
+            { System.out.println("Se encontro el lexema " + yytext()); return symbol(ParserSym.MAS);
             }
           // fall through
           case 48: break;
           case 8:
-            { System.out.println("Se encontro el lexema" + yytext()); return symbol(ParserSym.MENOS);
+            { System.out.println("Se encontro el lexema " + yytext()); return symbol(ParserSym.MENOS);
             }
           // fall through
           case 49: break;
           case 9:
-            { System.out.println("Se encontro el lexema" + yytext()); return symbol(ParserSym.DIV);
+            { System.out.println("Se encontro el lexema " + yytext()); return symbol(ParserSym.DIV);
             }
           // fall through
           case 50: break;
           case 10:
-            { System.out.println("Se encontro el lexema" + yytext()); return symbol(ParserSym.INT);
+            { System.out.println("Se encontro el lexema " + yytext()); return symbol(ParserSym.INT, Integer.valueOf(yytext()));
             }
           // fall through
           case 51: break;
@@ -853,17 +853,17 @@ public class idLexer implements java_cup.runtime.Scanner {
           // fall through
           case 55: break;
           case 15:
-            { System.out.println("Se encontro el lexema" + yytext()); 
+            { System.out.println("Se encontro el lexema " + yytext()); 
             }
           // fall through
           case 56: break;
           case 16:
-            { System.out.println("Se encontro el lexema" + yytext()); 
+            { System.out.println("Se encontro el lexema " + yytext()); 
             }
           // fall through
           case 57: break;
           case 17:
-            { System.out.println("Se encontro el lexema" + yytext()); //return symbol(sym.MENOR_IG);
+            { System.out.println("Se encontro el lexema " + yytext()); //return symbol(sym.MENOR_IG);
             }
           // fall through
           case 58: break;

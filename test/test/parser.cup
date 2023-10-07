@@ -10,7 +10,7 @@ terminal Integer INT;
 
 
 /** symbolos no terminales **/
-non terminal Integer exp;
+non terminal Integer exp, inicio;
 
 /** Precedence **/
 precedence left MAS, MENOS;
